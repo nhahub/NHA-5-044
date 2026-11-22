@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATCH HEAVEN — Home (Mobile)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-bone': '#F3EFE6',
+        'deep-ink': '#141311',
+        'aged-brass': '#A8823A',
+        'aged-brass-text': '#7D5E22',
+        'hairline': '#D9D2C3',
+        'primary': '#141311',
+        'on-primary': '#F3EFE6',
+        'surface': '#F3EFE6',
+        'on-surface': '#141311',
+        'surface-alt': '#EAE4D7',
+        'on-surface-alt': '#141311',
+        'surface-input': '#FFFFFF',
+        'on-surface-input': '#141311',
+        'surface-dark': '#141311',
+        'on-surface-dark': '#F3EFE6',
+        'muted': '#5E5A52',
+        'on-muted': '#F3EFE6',
+        'outline': '#D9D2C3',
+        'success': '#2D5A3C',
+        'on-success': '#F3EFE6',
+        'error': '#9B2C2C',
+        'on-error': '#FFFFFF',
+        'warning': '#8C621B',
+        'on-warning': '#FFFFFF',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '2px',
+        'DEFAULT': '2px',
+        'md': '4px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'section-lg': '96px',
+        'page-margin': '48px',
+        'page-margin-mobile': '20px',
+      },
+      fontFamily: {
+        'display': ['"Fraunces"', 'sans-serif'],
+        'headline': ['"Fraunces"', 'sans-serif'],
+        'title': ['"Fraunces"', 'sans-serif'],
+        'body': ['"Archivo"', 'sans-serif'],
+        'label': ['"Archivo"', 'sans-serif'],
+        'mono': ['"IBM Plex Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['84px', { lineHeight: '88px', letterSpacing: '-1.5px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-lg': ['52px', { lineHeight: '58px', letterSpacing: '-0.75px', fontWeight: '600' }],
+        'headline-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.4px', fontWeight: '600' }],
+        'headline-md': ['36px', { lineHeight: '42px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-sm': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '500' }],
+        'title-lg': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'label-md': ['14px', { lineHeight: '18px', letterSpacing: '0.1px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.6px', fontWeight: '600' }],
+        'mono-lg': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body data-screen="home_mobile" class="bg-surface text-on-surface font-body antialiased">
+  <div class="min-h-[884px] flex flex-col" data-stitch-vh="min-h-[884px]===min-h-screen">
+
+    <!-- Mobile Header -->
+    <header class="sticky top-0 z-30 bg-surface border-b border-hairline">
+      <div class="px-page-margin-mobile h-16 flex items-center justify-between">
+        <button type="button" aria-label="Open navigation menu" class="inline-flex items-center justify-center w-10 h-10 -ml-2 text-on-surface">
+          <span class="material-symbols-outlined text-title-lg" aria-hidden="true">menu</span>
+        </button>
+
+        <a href="#" class="font-headline text-title-lg tracking-tight text-on-surface uppercase" data-design-text-token="title-lg">WATCH HEAVEN</a>
+
+        <div class="flex items-center gap-3">
+          <button type="button" aria-label="Search watches" class="inline-flex items-center justify-center w-9 h-9 text-on-surface">
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">search</span>
+          </button>
+          <a href="#" aria-label="Shopping cart with 2 items" class="inline-flex items-center gap-1 text-on-surface">
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">shopping_bag</span>
+            <span class="font-mono text-mono-sm tabular-nums bg-primary text-on-primary px-1.5 py-0.5 rounded-sm" data-design-text-token="mono-sm">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+
+      <!-- Section A: Mobile Hero -->
+      <section class="border-b border-hairline bg-surface-alt">
+        <div class="aspect-[4/3] w-full bg-surface-dark">
+          <img src="https://lh3.googleusercontent.com/aida/ALJJyrDysdyV_k0_7o4Rz9KBggVvitSC7-DlFPCQ6Y5I2iTLyBbxwMhe8A7Vv37y8RBktsIkV07T3g53O2EbNWc45Jo6MYlSVA1o0A7KhNFbmWcI3WeWUsZYTh1wKqVFrLGv0ZMVyYrx2x2eprmuCLHz0HqbkRjBRvvD3n6msdk2NjA4lfArCYi13S1X6uNrGMVKWUNQhQbCf5QtGJUZXhxDGNpNlcuHOhG8mwPPOZN8ummZpoFgBw" alt="Luxury mechanical dress wristwatch on travertine stone" class="w-full h-full object-cover">
+        </div>
+        <div class="px-page-margin-mobile py-8">
+          <p class="font-mono text-mono-sm text-aged-brass-text uppercase mb-3" data-design-text-token="mono-sm">CAIRO · HOROLOGICAL RETAIL</p>
+          <h1 class="font-display text-display-lg-mobile text-on-surface mb-3" data-design-text-token="display-lg-mobile">Built for every hour.</h1>
+          <p class="font-body text-body-md text-muted mb-6" data-design-text-token="body-md">
+            A considered collection of watches, from daily essentials to mechanical classics.
+          </p>
+          <div class="flex flex-col gap-3">
+            <a href="#selected" class="w-full inline-flex items-center justify-center bg-primary text-on-primary py-3.5 rounded-sm font-label text-label-lg" data-design-text-token="label-lg">Explore watches</a>
+            <a href="#categories" class="w-full inline-flex items-center justify-center border border-primary text-on-surface py-3.5 rounded-sm font-label text-label-lg" data-design-text-token="label-lg">View the collection</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section B: Category Exploration -->
+      <section id="categories" class="px-page-margin-mobile py-10 border-b border-hairline">
+        <p class="font-mono text-mono-sm text-aged-brass-text uppercase mb-1" data-design-text-token="mono-sm">DEPARTMENTS</p>
+        <h2 class="font-headline text-headline-lg-mobile text-on-surface mb-6" data-design-text-token="headline-lg-mobile">Browse by category</h2>
+
+        <div class="flex flex-col gap-6">
+          <a href="#" class="block">
+            <div class="aspect-[4/3] w-full bg-surface-alt overflow-hidden mb-2.5">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB3ANCvX5CzxFIfFHH87cIr7qq4dU-wO1UOPiE3070E-4-lAcz68xqiNDEOzFxFn0zLjd24SkrYzfuoPp6uSUXTVlzfhEAdjT3vs770IGBbxLbiJnR3iGz0bJKAO5zdrrS62f3Ovxty_MsDvmDeyzvhUmiOgZxxBBgOnJwePLzv0FzrY2PrVSP5bWhQmrD0k3MIdbK5SmfhqQk13oN_pB49a0IJsnpvd3e1jm6vtK3nFCIf" alt="Men&#39;s Watches" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-2.5">
+              <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Men&#39;s Watches</h3>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+
+          <a href="#" class="block">
+            <div class="aspect-[4/3] w-full bg-surface-alt overflow-hidden mb-2.5">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB6fNWONulRZAzo924YbZo3GPBo3iouKuLuQvxMlYBOaksErdkXm-X3tFovly0YSVwV3A1efyiakl-m5XQcIG7tU0V9j_whrI0_giChFsEFEjsuz3UQzOcDQkJA3Y65DhY9I2-w4BqLgnSrx_dr63hlkQaOrU1E8SPQBPxwI5ppiv_Dmj2vMrNVGyWk9nqAmp8_U6MmGer4AQ49jLPMquydsFcAMmPDazZ8xVAvmdvGztqTTGk" alt="Women&#39;s Watches" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-2.5">
+              <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Women&#39;s Watches</h3>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+
+          <a href="#" class="block">
+            <div class="aspect-[4/3] w-full bg-surface-alt overflow-hidden mb-2.5">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBgM7J4iN6QmB-WwDV-iBp6OEXfu7IQbZaD2Mq2CM9eLRNrU8S6h6CaaReoep5QS12hxuPbZOf-KXbCCBJJlXDtgqhFtwlEH2fp_1Fw4bgtfJNtPXBPDeOw8i4nJi_SRz46oqqCWy7b2lOhhmtGt9C_IAXCVcvH5zASFopolRULL9e2N3E2N8QR19P-W0N5DkY8M7Jz9M56kkawrck2rkzvzBveA9xnbFQNVJzzVxyF8l_s8g" alt="Smart Watches" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-2.5">
+              <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Smart Watches</h3>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+
+          <a href="#" class="block">
+            <div class="aspect-[4/3] w-full bg-surface-alt overflow-hidden mb-2.5">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB_uj8HdYUEkuP_dOKxsoOsNhiIA_2vi_v5Uia4MsQk1M1UeGBtd3GQ7KCJifmK5hyf57L54dvx_7DNKoA7ILBLDL-uumFOqQ4-gUc_VYHfOUGtw87TLQxcIdkCmaDwsG2ew2uOZuSxF_3VsFrkyiqCAj5KoGeqx3lbsB1KCPIb6Lm8uAAn5M0yNaE8xaUAQZkgJ-yhTJ1ufdUgwl8ZPr8yPgbJHPvjDeysHFGZPndv6BQ0ga0" alt="Luxury Watches" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-2.5">
+              <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Luxury Watches</h3>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section C: Selected Watches -->
+      <section id="selected" class="px-page-margin-mobile py-10 border-b border-hairline">
+        <p class="font-mono text-mono-sm text-aged-brass-text uppercase mb-1" data-design-text-token="mono-sm">THE COLLECTION / 2026</p>
+        <h2 class="font-headline text-headline-lg-mobile text-on-surface mb-6" data-design-text-token="headline-lg-mobile">Selected watches</h2>
+
+        <!-- Featured Card -->
+        <a href="#" class="block mb-8">
+          <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-3">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrCpYkZHBGySFSYQKIPBKgKcZ-RTkPrqXwhe-wFgOzzOcMgZvTqAcN4yxRe9xl6DCMbcwX9gOS9uGBJkINFOao5Zl3_m7g-CZ1WCqteqKn-vrtqoeonW-HfcJtg-cjhp8DrRBKD3LnIahcxpflMsRlt7vgp2wpPtcIDoAhO9cLtSDq1VsjhzzTitsA_U7MxW2xg_iNULA3oYxnbpf2G3Ud_fHJ0aixUQECyWKvyk6yiCxO5KObvziIkE" alt="Orient Bambino Automatic" class="w-full h-full object-cover">
+          </div>
+          <div class="border-t border-hairline pt-3">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">WH-014 · AUTOMATIC</p>
+              <p class="font-mono text-mono-md text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-md">EGP 12,900</p>
+            </div>
+            <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Orient Bambino Automatic</h3>
+          </div>
+        </a>
+
+        <!-- 2-Col Mobile Grid -->
+        <div class="grid grid-cols-2 gap-gutter-md">
+          <a href="#" class="block">
+            <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-2">
+              <img src="../public/media/9a49e9b125f9.png" alt="Casio MTP-1302D" class="w-full h-full object-cover">
+            </div>
+            <p class="font-mono text-mono-sm text-muted" data-design-text-token="mono-sm">WH-004</p>
+            <h3 class="font-label text-label-md text-on-surface mt-0.5" data-design-text-token="label-md">Casio MTP-1302D</h3>
+            <p class="font-mono text-mono-sm text-aged-brass-text tabular-nums mt-1" data-design-text-token="mono-sm">EGP 3,450</p>
+          </a>
+
+          <a href="#" class="block">
+            <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-2">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAVk-3xhovCzWITa5nZNK1Y0vN-4mx28FcLXPHkZBIj7vfYx1x7RBmjCG6zRwFR6VigtZ_0iicgMtR9aalZvf3s5YVs-XItZcXrw_W8SthxBPNuNf-svUaS9L8Rzog4MlYkCvkIpuuJyYEfUg1FzCNXU7Tu6dV6LXWGW1jqrFjEwi2bKnAeCFkCA8nk7Y7XIV8ipmYsCbf39wGj3Y2LLO_sMg-z3WdxDAHisJ0F8CMrtN-9ScO2WVBoD0SQcdVe" alt="Casio Edifice EFR-526" class="w-full h-full object-cover">
+            </div>
+            <p class="font-mono text-mono-sm text-muted" data-design-text-token="mono-sm">WH-009</p>
+            <h3 class="font-label text-label-md text-on-surface mt-0.5" data-design-text-token="label-md">Casio Edifice EFR-526</h3>
+            <p class="font-mono text-mono-sm text-aged-brass-text tabular-nums mt-1" data-design-text-token="mono-sm">EGP 6,800</p>
+          </a>
+
+          <a href="#" class="block">
+            <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-2">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAGCMlEFd882MGz-DKH96H68EPLgaxEaVi6BtxHn60b4UAgvKLLv-xavLuTBYsRYzulLrwZodPHTScOk4cJYMntF2elnHYLpkeRPkDoGZGxbV9rq90ZpoqlYbebmEOd-QHc5ynW4ii908Gds0ITAm1lfSRxORpRbR_DLrq2_DQtYlP_fpwAs_sWWMa5q2sKiDfVdoBD_HF2zbWPdK97__8xpCCQZ_vne6l19-ldnjc5NeaJh_UBzjo" alt="Seiko 5 Sports SRPD55" class="w-full h-full object-cover">
+            </div>
+            <p class="font-mono text-mono-sm text-muted" data-design-text-token="mono-sm">WH-018</p>
+            <h3 class="font-label text-label-md text-on-surface mt-0.5" data-design-text-token="label-md">Seiko 5 Sports</h3>
+            <p class="font-mono text-mono-sm text-aged-brass-text tabular-nums mt-1" data-design-text-token="mono-sm">EGP 18,500</p>
+          </a>
+
+          <a href="#" class="block">
+            <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-2">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDy3nJYcRDrAV3FYcYS9M7SGOmbcyYhBslsINTzMDS_9tzvoIoVpP-f9vXiV7gSFhXlj_lcBt0H0Gr5NA9I_xHFoVYAx4OjtYK4E8eSueeQYQUwIZ5aU3NAGrmBKhVeKZnHTb_CMsAht055ume9AsI1T6TtbHUXJGDQZe9gInvDu_hF-z6JGt5KbF3hDtF4kIeV_7a6RcdBTRdJcYoHi2ShLszmwGb96ql_BePwarMz7Fj5-0i6F-wFDeHNG-ju" alt="Fossil Raquel" class="w-full h-full object-cover">
+            </div>
+            <p class="font-mono text-mono-sm text-muted" data-design-text-token="mono-sm">WH-021</p>
+            <h3 class="font-label text-label-md text-on-surface mt-0.5" data-design-text-token="label-md">Fossil Raquel</h3>
+            <p class="font-mono text-mono-sm text-aged-brass-text tabular-nums mt-1" data-design-text-token="mono-sm">EGP 7,950</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section D: Collection of the Month -->
+      <section class="bg-surface-dark text-on-surface-dark px-page-margin-mobile py-10">
+        <p class="font-mono text-mono-sm text-aged-brass uppercase mb-2" data-design-text-token="mono-sm">COLLECTION OF THE MONTH</p>
+        <h2 class="font-headline text-headline-md-mobile text-on-surface-dark mb-4" data-design-text-token="headline-md-mobile">Orient Bambino</h2>
+        <div class="aspect-[4/3] w-full overflow-hidden mb-6">
+          <img src="https://lh3.googleusercontent.com/aida/ALJJyrDkSkQmRRdJZNwNuIkcNuWiOl7057ACFP1hODLf7jPU2WXupHSHBBURbCAQDLzIn8TncE2zqWFPIJ1n5raEIQzePs4tyZBie2TVLDuUkRaqveSQB_RYqKL576v6X-2miMGPzfHM7Bnr6QJOhOTnlfr4Yxh34pFkn3f73pSvdQecjP5Mc9aC_cPGwYnHXYw5-TgJGk491BaWSa5I7T8qkDZ0i-qKEDN4WlUj4HnUpevrvJqSKfh8AeSx" alt="Orient Bambino on wrist" class="w-full h-full object-cover">
+        </div>
+        <p class="font-body text-body-md opacity-90 mb-5" data-design-text-token="body-md">An automatic for everyday wear.</p>
+        <ul class="divide-y divide-muted border-t border-b border-muted mb-6 font-mono text-mono-sm">
+          <li class="py-2.5 flex justify-between"><span>Movement</span><span>Automatic</span></li>
+          <li class="py-2.5 flex justify-between"><span>Case</span><span>Stainless steel · 40.5 mm</span></li>
+          <li class="py-2.5 flex justify-between"><span>Strap</span><span>Leather strap</span></li>
+        </ul>
+        <a href="#" class="w-full inline-flex items-center justify-center bg-surface text-on-surface py-3.5 rounded-sm font-label text-label-lg" data-design-text-token="label-lg">View watch</a>
+      </section>
+
+    </main>
+
+    <!-- Mobile Footer -->
+    <footer class="bg-surface border-t border-hairline px-page-margin-mobile py-10">
+      <p class="font-headline text-title-lg text-on-surface uppercase mb-6" data-design-text-token="title-lg">WATCH HEAVEN</p>
+      <div class="grid grid-cols-2 gap-6 mb-8 font-body text-body-md">
+        <div>
+          <p class="font-label text-label-sm text-muted uppercase mb-3" data-design-text-token="label-sm">Shop</p>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#">Men&#39;s Watches</a></li>
+            <li><a href="#">Women&#39;s Watches</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Luxury Watches</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-label text-label-sm text-muted uppercase mb-3" data-design-text-token="label-sm">Customer</p>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Payment &amp; Delivery</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="font-mono text-mono-sm text-muted pt-6 border-t border-hairline" data-design-text-token="mono-sm">© 2026 WATCH HEAVEN · EGP</p>
+    </footer>
+
+  </div>
+
+
+</body></html>

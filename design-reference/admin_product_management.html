@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — WATCH HEAVEN Admin</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-bone': '#F3EFE6',
+        'deep-ink': '#141311',
+        'aged-brass': '#A8823A',
+        'aged-brass-text': '#7D5E22',
+        'hairline': '#D9D2C3',
+        'primary': '#141311',
+        'on-primary': '#F3EFE6',
+        'surface': '#F3EFE6',
+        'on-surface': '#141311',
+        'surface-alt': '#EAE4D7',
+        'on-surface-alt': '#141311',
+        'surface-input': '#FFFFFF',
+        'on-surface-input': '#141311',
+        'surface-dark': '#141311',
+        'on-surface-dark': '#F3EFE6',
+        'muted': '#5E5A52',
+        'on-muted': '#F3EFE6',
+        'outline': '#D9D2C3',
+        'success': '#2D5A3C',
+        'on-success': '#F3EFE6',
+        'error': '#9B2C2C',
+        'on-error': '#FFFFFF',
+        'warning': '#8C621B',
+        'on-warning': '#FFFFFF',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '2px',
+        'DEFAULT': '2px',
+        'md': '4px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'section-lg': '96px',
+        'page-margin': '48px',
+        'page-margin-mobile': '20px',
+      },
+      fontFamily: {
+        'display': ['"Fraunces"', 'sans-serif'],
+        'headline': ['"Fraunces"', 'sans-serif'],
+        'title': ['"Fraunces"', 'sans-serif'],
+        'body': ['"Archivo"', 'sans-serif'],
+        'label': ['"Archivo"', 'sans-serif'],
+        'mono': ['"IBM Plex Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['84px', { lineHeight: '88px', letterSpacing: '-1.5px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-lg': ['52px', { lineHeight: '58px', letterSpacing: '-0.75px', fontWeight: '600' }],
+        'headline-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.4px', fontWeight: '600' }],
+        'headline-md': ['36px', { lineHeight: '42px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-sm': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '500' }],
+        'title-lg': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'label-md': ['14px', { lineHeight: '18px', letterSpacing: '0.1px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.6px', fontWeight: '600' }],
+        'mono-lg': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body data-screen="admin_product_management" class="bg-surface text-on-surface font-body antialiased">
+  <div class="min-h-[1024px] flex flex-col md:flex-row" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Compact Admin Sidebar -->
+    <aside class="w-full md:w-64 shrink-0 bg-surface-alt border-b md:border-b-0 md:border-r border-hairline flex flex-col justify-between p-6">
+      <div>
+        <div class="pb-6 border-b border-hairline mb-6">
+          <p class="font-headline text-title-lg text-on-surface uppercase">WATCH HEAVEN</p>
+          <p class="font-mono text-mono-sm text-muted mt-1">ADMIN CONSOLE</p>
+        </div>
+        <nav aria-label="Admin navigation" class="flex flex-col gap-1.5">
+          <a href="#" class="flex items-center gap-3 px-3 py-2.5 font-label text-label-md text-muted hover:text-on-surface"><span class="material-symbols-outlined text-body-lg" aria-hidden="true">dashboard</span><span>Dashboard</span></a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2.5 bg-surface border-l-2 border-aged-brass font-label text-label-md text-on-surface"><span class="material-symbols-outlined text-body-lg" aria-hidden="true">watch</span><span>Products</span></a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2.5 font-label text-label-md text-muted hover:text-on-surface"><span class="material-symbols-outlined text-body-lg" aria-hidden="true">category</span><span>Categories</span></a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2.5 font-label text-label-md text-muted hover:text-on-surface"><span class="material-symbols-outlined text-body-lg" aria-hidden="true">receipt_long</span><span>Orders</span></a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2.5 font-label text-label-md text-muted hover:text-on-surface"><span class="material-symbols-outlined text-body-lg" aria-hidden="true">sell</span><span>Coupons</span></a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-hairline mt-8">
+        <a href="#" class="flex items-center gap-3 px-3 py-2 font-label text-label-md text-muted hover:text-error"><span class="material-symbols-outlined text-body-lg" aria-hidden="true">logout</span><span>Sign out</span></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8 lg:p-12 max-w-6xl">
+      <header class="pb-6 border-b border-hairline mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="font-mono text-mono-sm text-aged-brass-text uppercase mb-1">INVENTORY</p>
+          <h1 class="font-headline text-headline-md-mobile md:text-headline-md text-on-surface">Product management</h1>
+        </div>
+        <a href="#" class="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-sm font-label text-label-md hover:bg-aged-brass transition-colors">
+          <span class="material-symbols-outlined text-body-lg" aria-hidden="true">add</span>
+          <span>Add product</span>
+        </a>
+      </header>
+
+      <!-- Search & Category Filter -->
+      <div class="flex flex-wrap items-center gap-4 mb-6">
+        <div class="relative flex-1 min-w-[240px]">
+          <span class="material-symbols-outlined text-muted text-body-lg absolute left-3 top-3 pointer-events-none" aria-hidden="true">search</span>
+          <input type="search" placeholder="Search by product name or ID..." class="w-full bg-surface-input border border-hairline rounded-sm pl-9 pr-3 py-2.5 font-body text-body-md">
+        </div>
+        <select aria-label="Filter by category" class="bg-surface-input border border-hairline rounded-sm px-4 py-2.5 font-label text-label-md">
+          <option>All categories</option>
+          <option>Men&#39;s Watches</option>
+          <option>Women&#39;s Watches</option>
+          <option>Smart Watches</option>
+          <option>Luxury Watches</option>
+        </select>
+      </div>
+
+      <!-- Product Table -->
+      <div class="overflow-x-auto border-t border-hairline">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-hairline">
+              <th scope="col" class="py-3.5 pr-4 font-label text-label-sm text-muted uppercase">Watch</th>
+              <th scope="col" class="py-3.5 px-4 font-label text-label-sm text-muted uppercase">ID</th>
+              <th scope="col" class="py-3.5 px-4 font-label text-label-sm text-muted uppercase">Category</th>
+              <th scope="col" class="py-3.5 px-4 font-label text-label-sm text-muted uppercase">Price (EGP)</th>
+              <th scope="col" class="py-3.5 px-4 font-label text-label-sm text-muted uppercase">Stock</th>
+              <th scope="col" class="py-3.5 px-4 font-label text-label-sm text-muted uppercase">Status</th>
+              <th scope="col" class="py-3.5 pl-4 font-label text-label-sm text-muted uppercase text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            <tr class="hover:bg-surface-alt">
+              <td class="py-4 pr-4 flex items-center gap-3">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCpYkZHBGySFSYQKIPBKgKcZ-RTkPrqXwhe-wFgOzzOcMgZvTqAcN4yxRe9xl6DCMbcwX9gOS9uGBJkINFOao5Zl3_m7g-CZ1WCqteqKn-vrtqoeonW-HfcJtg-cjhp8DrRBKD3LnIahcxpflMsRlt7vgp2wpPtcIDoAhO9cLtSDq1VsjhzzTitsA_U7MxW2xg_iNULA3oYxnbpf2G3Ud_fHJ0aixUQECyWKvyk6yiCxO5KObvziIkE" alt="Orient Bambino" class="w-10 h-12 object-cover bg-surface-alt">
+                <span class="font-label text-label-md text-on-surface">Orient Bambino Automatic</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-mono-sm text-muted">WH-014</td>
+              <td class="py-4 px-4 font-body text-body-md">Men&#39;s Watches</td>
+              <td class="py-4 px-4 font-mono text-mono-md tabular-nums">12,900</td>
+              <td class="py-4 px-4 font-mono text-mono-md tabular-nums">12</td>
+              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded-sm bg-success text-on-success font-label text-label-sm">Active</span></td>
+              <td class="py-4 pl-4 text-right font-label text-label-sm">
+                <a href="#" class="text-aged-brass-text underline mr-3">Edit</a>
+                <button type="button" class="text-error underline">Deactivate</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-alt">
+              <td class="py-4 pr-4 flex items-center gap-3">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAGCMlEFd882MGz-DKH96H68EPLgaxEaVi6BtxHn60b4UAgvKLLv-xavLuTBYsRYzulLrwZodPHTScOk4cJYMntF2elnHYLpkeRPkDoGZGxbV9rq90ZpoqlYbebmEOd-QHc5ynW4ii908Gds0ITAm1lfSRxORpRbR_DLrq2_DQtYlP_fpwAs_sWWMa5q2sKiDfVdoBD_HF2zbWPdK97__8xpCCQZ_vne6l19-ldnjc5NeaJh_UBzjo" alt="Seiko 5 Sports" class="w-10 h-12 object-cover bg-surface-alt">
+                <span class="font-label text-label-md text-on-surface">Seiko 5 Sports SRPD55</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-mono-sm text-muted">WH-018</td>
+              <td class="py-4 px-4 font-body text-body-md">Luxury Watches</td>
+              <td class="py-4 px-4 font-mono text-mono-md tabular-nums">18,500</td>
+              <td class="py-4 px-4 font-mono text-mono-md text-error tabular-nums">2</td>
+              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded-sm bg-warning text-on-warning font-label text-label-sm">Low stock</span></td>
+              <td class="py-4 pl-4 text-right font-label text-label-sm">
+                <a href="#" class="text-aged-brass-text underline mr-3">Edit</a>
+                <button type="button" class="text-error underline">Deactivate</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-alt">
+              <td class="py-4 pr-4 flex items-center gap-3">
+                <img src="../public/media/9a49e9b125f9.png" alt="Casio MTP-1302D" class="w-10 h-12 object-cover bg-surface-alt">
+                <span class="font-label text-label-md text-on-surface">Casio MTP-1302D</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-mono-sm text-muted">WH-004</td>
+              <td class="py-4 px-4 font-body text-body-md">Men&#39;s Watches</td>
+              <td class="py-4 px-4 font-mono text-mono-md tabular-nums">3,450</td>
+              <td class="py-4 px-4 font-mono text-mono-md tabular-nums">28</td>
+              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded-sm bg-success text-on-success font-label text-label-sm">Active</span></td>
+              <td class="py-4 pl-4 text-right font-label text-label-sm">
+                <a href="#" class="text-aged-brass-text underline mr-3">Edit</a>
+                <button type="button" class="text-error underline">Deactivate</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+
+</body></html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATCH HEAVEN — The Watchmaker&#39;s Catalogue</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-bone': '#F3EFE6',
+        'deep-ink': '#141311',
+        'aged-brass': '#A8823A',
+        'aged-brass-text': '#7D5E22',
+        'hairline': '#D9D2C3',
+        'primary': '#141311',
+        'on-primary': '#F3EFE6',
+        'surface': '#F3EFE6',
+        'on-surface': '#141311',
+        'surface-alt': '#EAE4D7',
+        'on-surface-alt': '#141311',
+        'surface-input': '#FFFFFF',
+        'on-surface-input': '#141311',
+        'surface-dark': '#141311',
+        'on-surface-dark': '#F3EFE6',
+        'muted': '#5E5A52',
+        'on-muted': '#F3EFE6',
+        'outline': '#D9D2C3',
+        'success': '#2D5A3C',
+        'on-success': '#F3EFE6',
+        'error': '#9B2C2C',
+        'on-error': '#FFFFFF',
+        'warning': '#8C621B',
+        'on-warning': '#FFFFFF',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '2px',
+        'DEFAULT': '2px',
+        'md': '4px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'section-lg': '96px',
+        'page-margin': '48px',
+        'page-margin-mobile': '20px',
+      },
+      fontFamily: {
+        'display': ['"Fraunces"', 'sans-serif'],
+        'headline': ['"Fraunces"', 'sans-serif'],
+        'title': ['"Fraunces"', 'sans-serif'],
+        'body': ['"Archivo"', 'sans-serif'],
+        'label': ['"Archivo"', 'sans-serif'],
+        'mono': ['"IBM Plex Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['84px', { lineHeight: '88px', letterSpacing: '-1.5px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-lg': ['52px', { lineHeight: '58px', letterSpacing: '-0.75px', fontWeight: '600' }],
+        'headline-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.4px', fontWeight: '600' }],
+        'headline-md': ['36px', { lineHeight: '42px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-sm': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '500' }],
+        'title-lg': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'label-md': ['14px', { lineHeight: '18px', letterSpacing: '0.1px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.6px', fontWeight: '600' }],
+        'mono-lg': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body data-screen="home_desktop" class="bg-surface text-on-surface font-body antialiased">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Global Header -->
+    <header class="sticky top-0 z-30 bg-surface border-b border-hairline">
+      <div class="max-w-[1440px] mx-auto px-page-margin h-20 flex items-center justify-between gap-8">
+        <a href="#" class="font-headline text-title-lg tracking-tight text-on-surface uppercase shrink-0" data-design-text-token="title-lg">WATCH HEAVEN</a>
+
+        <nav aria-label="Main navigation" class="hidden md:flex items-center gap-8">
+          <a href="#" class="font-label text-label-lg text-aged-brass-text border-b border-aged-brass pb-0.5" data-design-text-token="label-lg">Home</a>
+          <a href="#" class="font-label text-label-lg text-on-surface hover:text-aged-brass-text transition-colors duration-state-change" data-design-text-token="label-lg">Men</a>
+          <a href="#" class="font-label text-label-lg text-on-surface hover:text-aged-brass-text transition-colors duration-state-change" data-design-text-token="label-lg">Women</a>
+          <a href="#" class="font-label text-label-lg text-on-surface hover:text-aged-brass-text transition-colors duration-state-change" data-design-text-token="label-lg">Smart</a>
+          <a href="#" class="font-label text-label-lg text-on-surface hover:text-aged-brass-text transition-colors duration-state-change" data-design-text-token="label-lg">Luxury</a>
+          <a href="#" class="font-label text-label-lg text-on-surface hover:text-aged-brass-text transition-colors duration-state-change" data-design-text-token="label-lg">All Watches</a>
+        </nav>
+
+        <div class="flex items-center gap-5 shrink-0">
+          <button type="button" aria-label="Search watches" class="inline-flex items-center gap-1.5 font-label text-label-md text-on-surface hover:text-aged-brass-text transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">search</span>
+            <span class="hidden lg:inline" data-design-text-token="label-md">Search</span>
+          </button>
+          <a href="#" aria-label="Customer account" class="inline-flex items-center gap-1.5 font-label text-label-md text-on-surface hover:text-aged-brass-text transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">person</span>
+            <span class="hidden lg:inline" data-design-text-token="label-md">Account</span>
+          </a>
+          <a href="#" aria-label="Shopping cart with 2 items" class="inline-flex items-center gap-2 font-label text-label-md text-on-surface hover:text-aged-brass-text transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">shopping_bag</span>
+            <span class="font-mono text-mono-sm tabular-nums bg-primary text-on-primary px-1.5 py-0.5 rounded-sm" data-design-text-token="mono-sm">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+
+      <!-- Section A: Editorial Hero -->
+      <section class="border-b border-hairline bg-surface-alt">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-12 min-h-[760px]">
+          <div class="col-span-12 lg:col-span-5 px-page-margin py-section flex flex-col justify-between">
+            <div>
+              <p class="font-mono text-mono-sm text-aged-brass-text uppercase tracking-widest mb-6" data-design-text-token="mono-sm">CAIRO · HOROLOGICAL RETAIL</p>
+              <h1 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface text-balance mb-6" data-design-text-token="display-lg">Built for every hour.</h1>
+              <p class="font-body text-body-lg text-muted max-w-md text-pretty mb-10" data-design-text-token="body-lg">
+                A considered collection of watches, from daily essentials to mechanical classics.
+              </p>
+              <div class="flex flex-wrap items-center gap-6">
+                <!-- COMPONENT: button-primary -->
+                <a href="#selected-watches" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center bg-primary text-on-primary px-7 py-4 rounded-sm font-label text-label-lg transition-colors duration-state-change hover:bg-aged-brass">
+                  <span data-design-text-token="label-lg">Explore watches</span>
+                </a>
+                <!-- COMPONENT: button-tertiary -->
+                <a href="#categories" data-component-id="button-tertiary" data-component-type="button" data-component-variant="tertiary" class="inline-flex items-center gap-2 text-on-surface border-b border-primary pb-1 font-label text-label-lg transition-colors duration-state-change hover:text-aged-brass-text hover:border-aged-brass">
+                  <span data-design-text-token="label-lg">View the collection</span>
+                  <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="pt-10 border-t border-hairline flex items-center justify-between gap-4">
+              <div class="min-w-0">
+                <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">FEATURED REFERENCE</p>
+                <p class="font-title text-title-lg text-on-surface mt-1" data-design-text-token="title-lg">Orient Bambino</p>
+              </div>
+              <p class="font-mono text-mono-lg text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-lg">EGP 12,900</p>
+            </div>
+          </div>
+
+          <div class="col-span-12 lg:col-span-7 relative min-h-[480px] lg:min-h-full bg-surface-dark">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDysdyV_k0_7o4Rz9KBggVvitSC7-DlFPCQ6Y5I2iTLyBbxwMhe8A7Vv37y8RBktsIkV07T3g53O2EbNWc45Jo6MYlSVA1o0A7KhNFbmWcI3WeWUsZYTh1wKqVFrLGv0ZMVyYrx2x2eprmuCLHz0HqbkRjBRvvD3n6msdk2NjA4lfArCYi13S1X6uNrGMVKWUNQhQbCf5QtGJUZXhxDGNpNlcuHOhG8mwPPOZN8ummZpoFgBw" alt="Luxury mechanical dress wristwatch with cream dial and brown leather strap on travertine stone" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section B: Category Exploration (Asymmetric Composition) -->
+      <section id="categories" class="max-w-[1440px] mx-auto px-page-margin py-section-lg border-b border-hairline">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div>
+            <p class="font-mono text-mono-sm text-aged-brass-text uppercase mb-2" data-design-text-token="mono-sm">DEPARTMENTS</p>
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface" data-design-text-token="headline-lg">Browse by category</h2>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 font-label text-label-lg text-on-surface border-b border-primary pb-1 hover:text-aged-brass-text hover:border-aged-brass transition-colors duration-state-change shrink-0">
+            <span data-design-text-token="label-lg">All categories</span>
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-12 gap-gutter-lg items-start">
+          <!-- Men's Watches (Large Left) -->
+          <a href="#" class="col-span-12 md:col-span-7 group block">
+            <div class="aspect-[4/3] w-full bg-surface-alt overflow-hidden mb-4">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB3ANCvX5CzxFIfFHH87cIr7qq4dU-wO1UOPiE3070E-4-lAcz68xqiNDEOzFxFn0zLjd24SkrYzfuoPp6uSUXTVlzfhEAdjT3vs770IGBbxLbiJnR3iGz0bJKAO5zdrrS62f3Ovxty_MsDvmDeyzvhUmiOgZxxBBgOnJwePLzv0FzrY2PrVSP5bWhQmrD0k3MIdbK5SmfhqQk13oN_pB49a0IJsnpvd3e1jm6vtK3nFCIf" alt="Dark stainless steel men&#39;s chronograph watch" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-4">
+              <div>
+                <h3 class="font-headline text-headline-sm text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="headline-sm">Men&#39;s Watches</h3>
+                <p class="font-body text-body-md text-muted mt-1" data-design-text-token="body-md">Chronographs, field watches, and steel daily wear</p>
+              </div>
+              <span class="material-symbols-outlined text-title-lg text-on-surface group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Luxury Watches (Tall Right) -->
+          <a href="#" class="col-span-12 md:col-span-5 group block md:mt-16">
+            <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-4">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB_uj8HdYUEkuP_dOKxsoOsNhiIA_2vi_v5Uia4MsQk1M1UeGBtd3GQ7KCJifmK5hyf57L54dvx_7DNKoA7ILBLDL-uumFOqQ4-gUc_VYHfOUGtw87TLQxcIdkCmaDwsG2ew2uOZuSxF_3VsFrkyiqCAj5KoGeqx3lbsB1KCPIb6Lm8uAAn5M0yNaE8xaUAQZkgJ-yhTJ1ufdUgwl8ZPr8yPgbJHPvjDeysHFGZPndv6BQ0ga0" alt="Macro detail of automatic mechanical watch movement" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-4">
+              <div>
+                <h3 class="font-headline text-headline-sm text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="headline-sm">Luxury Watches</h3>
+                <p class="font-body text-body-md text-muted mt-1" data-design-text-token="body-md">Automatic calibres and collector pieces</p>
+              </div>
+              <span class="material-symbols-outlined text-title-lg text-on-surface group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Women's Watches -->
+          <a href="#" class="col-span-12 md:col-span-5 group block mt-8">
+            <div class="aspect-[4/3] w-full bg-surface-alt overflow-hidden mb-4">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB6fNWONulRZAzo924YbZo3GPBo3iouKuLuQvxMlYBOaksErdkXm-X3tFovly0YSVwV3A1efyiakl-m5XQcIG7tU0V9j_whrI0_giChFsEFEjsuz3UQzOcDQkJA3Y65DhY9I2-w4BqLgnSrx_dr63hlkQaOrU1E8SPQBPxwI5ppiv_Dmj2vMrNVGyWk9nqAmp8_U6MmGer4AQ49jLPMquydsFcAMmPDazZ8xVAvmdvGztqTTGk" alt="Minimalist women&#39;s rectangular gold watch on warm linen" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-4">
+              <div>
+                <h3 class="font-headline text-headline-sm text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="headline-sm">Women&#39;s Watches</h3>
+                <p class="font-body text-body-md text-muted mt-1" data-design-text-token="body-md">Slim cases, warm gold tones, and leather straps</p>
+              </div>
+              <span class="material-symbols-outlined text-title-lg text-on-surface group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Smart Watches -->
+          <a href="#" class="col-span-12 md:col-span-7 group block mt-8">
+            <div class="aspect-[16/10] w-full bg-surface-alt overflow-hidden mb-4">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBgM7J4iN6QmB-WwDV-iBp6OEXfu7IQbZaD2Mq2CM9eLRNrU8S6h6CaaReoep5QS12hxuPbZOf-KXbCCBJJlXDtgqhFtwlEH2fp_1Fw4bgtfJNtPXBPDeOw8i4nJi_SRz46oqqCWy7b2lOhhmtGt9C_IAXCVcvH5zASFopolRULL9e2N3E2N8QR19P-W0N5DkY8M7Jz9M56kkawrck2rkzvzBveA9xnbFQNVJzzVxyF8l_s8g" alt="Contemporary matte-black circular smartwatch" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline pt-4">
+              <div>
+                <h3 class="font-headline text-headline-sm text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="headline-sm">Smart Watches</h3>
+                <p class="font-body text-body-md text-muted mt-1" data-design-text-token="body-md">Connected dials with sapphire clarity and fitness tracking</p>
+              </div>
+              <span class="material-symbols-outlined text-title-lg text-on-surface group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section C: Selected Watches -->
+      <section id="selected-watches" class="max-w-[1440px] mx-auto px-page-margin py-section-lg border-b border-hairline">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div>
+            <p class="font-mono text-mono-sm text-aged-brass-text uppercase mb-2" data-design-text-token="mono-sm">THE COLLECTION / 2026</p>
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface" data-design-text-token="headline-lg">Selected watches</h2>
+          </div>
+          <p class="font-body text-body-md text-muted max-w-sm" data-design-text-token="body-md">
+            Six timepieces chosen for mechanical reliability, clear dials, and everyday proportion.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-gutter-lg">
+          <!-- Featured Larger Product: Orient Bambino Automatic -->
+          <a href="#" class="col-span-12 lg:col-span-6 group block">
+            <div class="aspect-[4/5] w-full bg-surface-alt overflow-hidden mb-4">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCpYkZHBGySFSYQKIPBKgKcZ-RTkPrqXwhe-wFgOzzOcMgZvTqAcN4yxRe9xl6DCMbcwX9gOS9uGBJkINFOao5Zl3_m7g-CZ1WCqteqKn-vrtqoeonW-HfcJtg-cjhp8DrRBKD3LnIahcxpflMsRlt7vgp2wpPtcIDoAhO9cLtSDq1VsjhzzTitsA_U7MxW2xg_iNULA3oYxnbpf2G3Ud_fHJ0aixUQECyWKvyk6yiCxO5KObvziIkE" alt="Orient Bambino Automatic" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+            </div>
+            <div class="border-t border-hairline pt-4">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">WH-014 · AUTOMATIC</p>
+                <p class="font-mono text-mono-lg text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-lg">EGP 12,900</p>
+              </div>
+              <h3 class="font-headline text-headline-sm text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="headline-sm">Orient Bambino Automatic</h3>
+            </div>
+          </a>
+
+          <!-- Right 2x2 Grid -->
+          <div class="col-span-12 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-gutter-lg">
+            <!-- Casio MTP-1302D -->
+            <a href="#" class="group block">
+              <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-3">
+                <img src="../public/media/9a49e9b125f9.png" alt="Casio MTP-1302D" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+              </div>
+              <div class="border-t border-hairline pt-3">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                  <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">WH-004 · QUARTZ</p>
+                  <p class="font-mono text-mono-md text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-md">EGP 3,450</p>
+                </div>
+                <h3 class="font-title text-title-lg text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="title-lg">Casio MTP-1302D</h3>
+              </div>
+            </a>
+
+            <!-- Casio Edifice EFR-526 -->
+            <a href="#" class="group block">
+              <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-3">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAVk-3xhovCzWITa5nZNK1Y0vN-4mx28FcLXPHkZBIj7vfYx1x7RBmjCG6zRwFR6VigtZ_0iicgMtR9aalZvf3s5YVs-XItZcXrw_W8SthxBPNuNf-svUaS9L8Rzog4MlYkCvkIpuuJyYEfUg1FzCNXU7Tu6dV6LXWGW1jqrFjEwi2bKnAeCFkCA8nk7Y7XIV8ipmYsCbf39wGj3Y2LLO_sMg-z3WdxDAHisJ0F8CMrtN-9ScO2WVBoD0SQcdVe" alt="Casio Edifice EFR-526" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+              </div>
+              <div class="border-t border-hairline pt-3">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                  <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">WH-009 · CHRONO</p>
+                  <p class="font-mono text-mono-md text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-md">EGP 6,800</p>
+                </div>
+                <h3 class="font-title text-title-lg text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="title-lg">Casio Edifice EFR-526</h3>
+              </div>
+            </a>
+
+            <!-- Seiko 5 Sports SRPD55 -->
+            <a href="#" class="group block">
+              <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-3">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAGCMlEFd882MGz-DKH96H68EPLgaxEaVi6BtxHn60b4UAgvKLLv-xavLuTBYsRYzulLrwZodPHTScOk4cJYMntF2elnHYLpkeRPkDoGZGxbV9rq90ZpoqlYbebmEOd-QHc5ynW4ii908Gds0ITAm1lfSRxORpRbR_DLrq2_DQtYlP_fpwAs_sWWMa5q2sKiDfVdoBD_HF2zbWPdK97__8xpCCQZ_vne6l19-ldnjc5NeaJh_UBzjo" alt="Seiko 5 Sports SRPD55" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+              </div>
+              <div class="border-t border-hairline pt-3">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                  <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">WH-018 · AUTO</p>
+                  <p class="font-mono text-mono-md text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-md">EGP 18,500</p>
+                </div>
+                <h3 class="font-title text-title-lg text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="title-lg">Seiko 5 Sports SRPD55</h3>
+              </div>
+            </a>
+
+            <!-- Fossil Raquel -->
+            <a href="#" class="group block">
+              <div class="aspect-[3/4] w-full bg-surface-alt overflow-hidden mb-3">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrDy3nJYcRDrAV3FYcYS9M7SGOmbcyYhBslsINTzMDS_9tzvoIoVpP-f9vXiV7gSFhXlj_lcBt0H0Gr5NA9I_xHFoVYAx4OjtYK4E8eSueeQYQUwIZ5aU3NAGrmBKhVeKZnHTb_CMsAht055ume9AsI1T6TtbHUXJGDQZe9gInvDu_hF-z6JGt5KbF3hDtF4kIeV_7a6RcdBTRdJcYoHi2ShLszmwGb96ql_BePwarMz7Fj5-0i6F-wFDeHNG-ju" alt="Fossil Raquel" class="w-full h-full object-cover transition-transform duration-surface-enter group-hover:scale-[1.02]">
+              </div>
+              <div class="border-t border-hairline pt-3">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                  <p class="font-mono text-mono-sm text-muted uppercase" data-design-text-token="mono-sm">WH-021 · WOMEN&#39;S</p>
+                  <p class="font-mono text-mono-md text-aged-brass-text tabular-nums shrink-0" data-design-text-token="mono-md">EGP 7,950</p>
+                </div>
+                <h3 class="font-title text-title-lg text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="title-lg">Fossil Raquel</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6th Item Horizontal Strip -->
+        <div class="mt-10 pt-8 border-t border-hairline grid grid-cols-12 gap-gutter-lg items-center">
+          <div class="col-span-12 md:col-span-3">
+            <div class="aspect-[4/3] bg-surface-alt overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBL9J2bgC3K9t38XDJXIcJ-iW7F-c5fNDKIhWs0KFuqajwvQ5plGSg7VzZxJGTY0C233TmrzXUdMszDqG1AACDinEi0KhLw8pWonXpVIPkl7t8VzBHokq5FawlQsNM3yBLeA07TqIaHrFZh0oqyfMttEELzFbxJtF23mZFGJlnCABUUKNP-YLAfdKuglvsH4ntIn5EuK3oQdtksucOVomSv3UGwtSs2rpFxJnTLpgrWPJjwdp1gDrojGA" alt="Samsung Galaxy Watch7" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6">
+            <p class="font-mono text-mono-sm text-muted uppercase mb-1" data-design-text-token="mono-sm">WH-029 · SMART WATCH</p>
+            <h3 class="font-headline text-headline-sm text-on-surface" data-design-text-token="headline-sm">Samsung Galaxy Watch7</h3>
+            <p class="font-body text-body-md text-muted text-pretty mt-1" data-design-text-token="body-md">Sapphire crystal glass, dual-frequency GPS, and titanium-gray armor aluminum case.</p>
+          </div>
+          <div class="col-span-12 md:col-span-3 flex md:flex-col items-center md:items-end justify-between gap-4">
+            <p class="font-mono text-mono-lg text-aged-brass-text tabular-nums" data-design-text-token="mono-lg">EGP 11,999</p>
+            <a href="#" class="inline-flex items-center gap-2 font-label text-label-lg text-on-surface border-b border-primary pb-0.5 hover:text-aged-brass-text hover:border-aged-brass">
+              <span data-design-text-token="label-lg">View watch</span>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section D: Collection of the Month (Dark Editorial Spread) -->
+      <section class="bg-surface-dark text-on-surface-dark">
+        <div class="max-w-[1440px] mx-auto px-page-margin py-section-lg grid grid-cols-12 gap-gutter-xl items-center">
+          <div class="col-span-12 lg:col-span-6">
+            <div class="aspect-[4/3] overflow-hidden bg-surface-alt">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDkSkQmRRdJZNwNuIkcNuWiOl7057ACFP1hODLf7jPU2WXupHSHBBURbCAQDLzIn8TncE2zqWFPIJ1n5raEIQzePs4tyZBie2TVLDuUkRaqveSQB_RYqKL576v6X-2miMGPzfHM7Bnr6QJOhOTnlfr4Yxh34pFkn3f73pSvdQecjP5Mc9aC_cPGwYnHXYw5-TgJGk491BaWSa5I7T8qkDZ0i-qKEDN4WlUj4HnUpevrvJqSKfh8AeSx" alt="Orient Bambino Automatic worn on wrist" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6 lg:pl-8">
+            <p class="font-mono text-mono-sm text-aged-brass uppercase tracking-widest mb-4" data-design-text-token="mono-sm">COLLECTION OF THE MONTH</p>
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface-dark mb-4" data-design-text-token="headline-lg">Orient Bambino Automatic</h2>
+            <p class="font-title text-title-lg text-on-surface-dark opacity-90 mb-8" data-design-text-token="title-lg">An automatic for everyday wear.</p>
+
+            <ul class="divide-y divide-muted border-t border-b border-muted mb-10">
+              <li class="py-3.5 flex items-center justify-between">
+                <span class="font-label text-label-md opacity-80" data-design-text-token="label-md">Movement</span>
+                <span class="font-mono text-mono-md" data-design-text-token="mono-md">Automatic movement</span>
+              </li>
+              <li class="py-3.5 flex items-center justify-between">
+                <span class="font-label text-label-md opacity-80" data-design-text-token="label-md">Case</span>
+                <span class="font-mono text-mono-md" data-design-text-token="mono-md">Stainless steel case</span>
+              </li>
+              <li class="py-3.5 flex items-center justify-between">
+                <span class="font-label text-label-md opacity-80" data-design-text-token="label-md">Diameter</span>
+                <span class="font-mono text-mono-md tabular-nums" data-design-text-token="mono-md">40.5 mm case diameter</span>
+              </li>
+              <li class="py-3.5 flex items-center justify-between">
+                <span class="font-label text-label-md opacity-80" data-design-text-token="label-md">Strap</span>
+                <span class="font-mono text-mono-md" data-design-text-token="mono-md">Leather strap</span>
+              </li>
+            </ul>
+
+            <a href="#" class="inline-flex items-center justify-center bg-surface text-on-surface px-7 py-4 rounded-sm font-label text-label-lg transition-colors duration-state-change hover:bg-aged-brass hover:text-on-primary">
+              <span data-design-text-token="label-lg">View watch</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section E: Final Collection Navigation -->
+      <section class="max-w-[1440px] mx-auto px-page-margin py-section border-b border-hairline">
+        <a href="#" class="group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-4">
+          <div>
+            <p class="font-mono text-mono-sm text-muted uppercase mb-2" data-design-text-token="mono-sm">COMPLETE CATALOGUE</p>
+            <h2 class="font-headline text-headline-md-mobile md:text-headline-md text-on-surface group-hover:text-aged-brass-text transition-colors" data-design-text-token="headline-md">Explore all 24 watches in stock</h2>
+          </div>
+          <span class="inline-flex items-center gap-3 font-label text-label-lg text-on-surface border border-primary px-6 py-3.5 rounded-sm group-hover:bg-primary group-hover:text-on-primary transition-colors shrink-0">
+            <span data-design-text-token="label-lg">Browse all watches</span>
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+          </span>
+        </a>
+      </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-surface border-t border-hairline">
+      <div class="max-w-[1440px] mx-auto px-page-margin py-section grid grid-cols-12 gap-gutter-lg">
+        <div class="col-span-12 md:col-span-4">
+          <p class="font-headline text-title-lg text-on-surface uppercase mb-3" data-design-text-token="title-lg">WATCH HEAVEN</p>
+          <p class="font-body text-body-md text-muted max-w-xs" data-design-text-token="body-md">
+            Curated mechanical, quartz, and smart watches delivered across Egypt.
+          </p>
+        </div>
+
+        <div class="col-span-6 md:col-span-2">
+          <p class="font-label text-label-sm text-muted uppercase mb-4" data-design-text-token="label-sm">Shop</p>
+          <ul class="flex flex-col gap-2.5 font-body text-body-md">
+            <li><a href="#" class="hover:text-aged-brass-text">Men&#39;s Watches</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">Women&#39;s Watches</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">Smart Watches</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">Luxury Watches</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-6 md:col-span-3">
+          <p class="font-label text-label-sm text-muted uppercase mb-4" data-design-text-token="label-sm">Customer</p>
+          <ul class="flex flex-col gap-2.5 font-body text-body-md">
+            <li><a href="#" class="hover:text-aged-brass-text">My Account</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">My Orders</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 md:col-span-3">
+          <p class="font-label text-label-sm text-muted uppercase mb-4" data-design-text-token="label-sm">Information</p>
+          <ul class="flex flex-col gap-2.5 font-body text-body-md">
+            <li><a href="#" class="hover:text-aged-brass-text">Payment Methods</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">Delivery Information</a></li>
+            <li><a href="#" class="hover:text-aged-brass-text">Returns Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-hairline">
+        <div class="max-w-[1440px] mx-auto px-page-margin py-5 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-mono-sm text-muted">
+          <p data-design-text-token="mono-sm">© 2026 WATCH HEAVEN. All rights reserved.</p>
+          <p data-design-text-token="mono-sm">Currency: EGP · Cash on Delivery &amp; Paymob</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body></html>
